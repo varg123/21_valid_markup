@@ -2,9 +2,6 @@
 <html lang="ru">
 
 <head>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   <title>Твой дом</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/stylish-portfolio.css" rel="stylesheet">
@@ -13,12 +10,7 @@
   <link href="font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.js"></script>
-  <![endif]-->
+  
 
   <meta charset="utf-8">
 </head>
@@ -163,23 +155,6 @@
   </section>
 
 
-  <script>
-    ymaps.ready(init);
-    function init(){
-      var map = new ymaps.Map("map", {
-        center: [55.740684, 37.618174],
-        zoom: 15
-      });
-      map.behaviors.disable('scrollZoom');
-      placemark = new ymaps.Placemark([55.740684, 37.618174], {
-        hintContent: 'Твой Дом',
-        balloonContentHeader: 'Твой Дом',
-        balloonContentBody: 'Москва, Старомонетный переулок, 10'
-      });
-      map.geoObjects.add(placemark);
-    }
-  </script>
-
   <!-- Footer -->
   <footer>
     <div class="container">
@@ -206,7 +181,34 @@
       </div>
     </div>
   </footer>
+    
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.js"></script>
+  <![endif]-->
+
+  <script>
+    ymaps.ready(init);
+    function init(){
+      var map = new ymaps.Map("map", {
+        center: [55.740684, 37.618174],
+        zoom: 15
+      });
+      map.behaviors.disable('scrollZoom');
+      placemark = new ymaps.Placemark([55.740684, 37.618174], {
+        hintContent: 'Твой Дом',
+        balloonContentHeader: 'Твой Дом',
+        balloonContentBody: 'Москва, Старомонетный переулок, 10'
+      });
+      map.geoObjects.add(placemark);
+    }
+  </script>
 
   <!-- Custom Theme JavaScript -->
   <script>
